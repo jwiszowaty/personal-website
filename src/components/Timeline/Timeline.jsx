@@ -22,7 +22,7 @@ function Timeline() {
     <>
       <section className='timeline-web'>
         <div className="now container">
-          <p>Code of Advent</p>
+          <p>Advent of Code</p>
           <p>Exploring TypeScript by converting  katas completed using JavaScript during Northcoders bootcamp.</p>
           <p>Creating mobile version of this website</p>
           <p>FreeCodeCamp - JavaScript Algorithms and Data Structures</p>

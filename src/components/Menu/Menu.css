@@ -3,7 +3,7 @@
     margin:0;
 }
 .name {
-    color: rgba(0,0,0,0.7);
+    color: rgba(255, 255, 255, 0.7);
     letter-spacing: 15px;
 
 }
@@ -24,8 +24,8 @@
     display: flex;
     flex-direction: column;
     grid-area: menu;
-    background-color: #b68198;
-    color:black;
+    background-color: #23424D;
+    color:rgb(255, 255, 255);
     font-size: 30px;
     width: 400px;
     height: 100%;
@@ -70,17 +70,19 @@ p {
     margin: 0;
 }
 a {
-    color:black;
+    color:rgb(255, 255, 255);
 }
 a:hover {
     font-weight: bolder;
 }
 .nav:hover {
-    text-shadow: 0px 0px 10px rgb(0, 255, 0);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
     font-weight: bolder;
 }
 .back {
-    color:white;
+    color:rgb(255, 255, 0);
+    font-weight: 600;
+    letter-spacing: 5px;
 }
 
 @media screen and (max-width: 768px){

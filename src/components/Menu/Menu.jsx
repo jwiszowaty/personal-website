@@ -20,6 +20,7 @@ function Menu({setNav, nav}) {
       </div>
       <nav>
         <div className="list">
+          {nav === "aoc" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={() => setNav("aoc")}>	&#10052; Advent of Code 2023 	&#10052;</p>}
           {nav === "blender" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={() => setNav("blender")}>Blender</p>}
           {nav === "northcoders" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={() => setNav("northcoders")}>Northcoders Bootcamp</p>}
           {nav === "personal" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={()=>setNav("personal")}>Personal</p>}
@@ -32,10 +33,11 @@ function Menu({setNav, nav}) {
           }}>back</button></div> : <button className="dropbtn" onClick={() => setMenu(!menu)}>Menu</button>}
           {menu === true && 
             <div className="dropdown-content">
-            <p className='nav' onClick={() => setNav("blender")}>Blender</p>
-            <p className='nav' onClick={() => setNav("northcoders")}>Northcoders bootcamp</p>
-            <p className='nav' onClick={() => setNav("personal")}>otherPersonal</p>
-            <p className='nav' onClick={() => setNav("freecodecamp")}>freeCodeCamp</p>
+              <p className='nav' onClick={() => setNav("aoc")}>Advent of Code 2023</p>
+              <p className='nav' onClick={() => setNav("blender")}>Blender</p>
+              <p className='nav' onClick={() => setNav("northcoders")}>Northcoders bootcamp</p>
+              <p className='nav' onClick={() => setNav("personal")}>otherPersonal</p>
+              <p className='nav' onClick={() => setNav("freecodecamp")}>freeCodeCamp</p>
           </div>
           }
           
