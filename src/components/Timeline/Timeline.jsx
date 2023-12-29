@@ -19,13 +19,9 @@ function Timeline() {
   const month = months[today.getMonth()]
   const year = today.getFullYear()
   return (
-    <>
       <section className='timeline-web'>
         <div className="now container">
-          <p>Advent of Code</p>
-          <p>Exploring TypeScript by converting  katas completed using JavaScript during Northcoders bootcamp.</p>
-          <p>Creating mobile version of this website</p>
-          <p>FreeCodeCamp - JavaScript Algorithms and Data Structures</p>
+          <p>Advent of Code - Practicing JavaScript and TDD</p>
         </div>
         <div className='update-timeline'>
           <p>NEXT</p>
@@ -37,6 +33,9 @@ function Timeline() {
           </div>
         </div>
         <div className="next container">
+          <p>Exploring TypeScript by converting  katas completed using JavaScript during Northcoders bootcamp.</p>
+          <p>Creating mobile version of this website</p>
+          <p>FreeCodeCamp - JavaScript Algorithms and Data Structures</p>
           <p>Tailwind CSS</p>
           <p>Angular</p>
           <p>Vue.js</p>
@@ -138,10 +137,6 @@ function Timeline() {
               
               <div className="content">
                 <p>Trainee Software Engineer - 13 weeks - Northcoders</p>
-                <div className='details'>
-                  <a href='github.com/jwiszowaty/be-jw-news'>Backend News App</a>
-                  <a href='https://luminous-sunshine-fe3228.netlify.app'>Website News App</a>
-                </div>
               </div>
             </div>
             <div className="done container basics">
@@ -179,65 +174,6 @@ function Timeline() {
           </div>
         </div>
       </section>
-
-      <section className='timeline-mobile'>
-        <div className="next container">
-          <div className='title'>next</div>
-          <div className="content">
-            <h2>2024</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div className="now container">
-          <div className='title'>now</div>
-          <div className="content">
-              <h2>{day} {month} {year}
-              </h2>
-              <p>Exploring TypeScript by converting  katas completed using JavaScript during Northcoders bootcamp.</p>
-            </div>
-        </div>
-        <div className="done container">
-          <div className='title'>completed</div>
-          <div className="content">
-            <h2>2022</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div className="done container">
-          <div className='title'>completed
-          </div>
-          <div className="content">
-            <h2>2021</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div className="done container">
-          <div className='title'>completed
-          </div>
-          <div className="content">
-            <h2>2020</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div className="done container">
-          <div className='title'>completed
-          </div>
-          <div className="content">
-            <h2>2019</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div className="done container">
-          <div className='title'>completed
-          </div>
-          <div className="content">
-            <h2>2018</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-      </section>
-    </>
-    
   )
 }
 

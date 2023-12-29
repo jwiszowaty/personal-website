@@ -1,5 +1,4 @@
 import React from 'react'
-
 function Aoc() {
     return (
       <section className='aoc'>

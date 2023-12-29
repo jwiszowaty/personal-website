@@ -4,9 +4,12 @@ import News1 from"../../assets/northcoders-news1.png"
 import News2 from "../../assets/northcoders-news2.png"
 import News3 from "../../assets/northcoders-news3.png"
 import News4 from "../../assets/northcoders-news4.png"
-function Northcoders() {
+import { useNavigate } from 'react-router-dom'
+function NorthcodersMob() {
+  const navigate = useNavigate()
   return (
     <section id='northcoders-section' className='projects-section'>
+      <h4 className='back' onClick={() => navigate(-1)}>&#x2190;back</h4>
       <div className='project-card'>
         <a href="https://luminous-sunshine-fe3228.netlify.app/" target='_blank' className='project-title'><h2>News app</h2></a>
         <div className='framework'>
@@ -31,4 +34,4 @@ function Northcoders() {
   )
 }
 
-export default Northcoders
+export default NorthcodersMob

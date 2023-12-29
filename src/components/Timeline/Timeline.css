@@ -121,8 +121,8 @@ h3 {
         overflow: visible;
         background: linear-gradient(
             to bottom,
-            rgba(128, 135, 102, 1),
-            rgba(128, 135, 102, 1) 10px,
+            rgba(128, 135, 102, 0.7),
+            rgba(128, 135, 102, 0.7) 10px,
             transparent 10px
         )
     }
@@ -554,53 +554,5 @@ h3 {
 @media screen and (max-width: 768px) {
     .timeline-web {
         display: none;
-    }
-    .timeline-mobile {
-        grid-area: timeline;
-        position: relative;
-        display: block;
-        margin: 0 20px 0 20px;
-        overflow-y: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-    .timeline-mobile::-webkit-scrollbar {
-        display: none;
-    }
-    .next > .title {
-        background-color: rgb(255, 166, 0);
-    }
-    .now > .title {
-        background-color: rgb(255, 0, 0);
-    }
-
-    .done:nth-last-of-type(1) {
-        margin-bottom:20px;
-    }
-    .done > .title {
-        background-color: rgb(0, 255, 0);
-    }
-    .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid black;
-        position: relative;
-        top: 15px;
-        z-index: 1;
-        padding: 2px;
-        width:100px;
-        height: 25px;
-        border-radius: 50px;
-        font-weight: bolder;
-        
-    }
-    .content {
-
-        border: 2px solid black;
-        width: 100%;
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
     }
 }

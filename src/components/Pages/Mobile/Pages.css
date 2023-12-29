@@ -103,7 +103,6 @@ h2{
 }
 @media screen and (max-width:768px) {
     .projects-section {
-        background-color: #23424D;
         display: flex;
         flex-direction: column;
         align-items: center;

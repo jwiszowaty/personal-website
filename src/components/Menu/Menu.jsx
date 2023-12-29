@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
 import './Menu.css'
 import CV from '../../assets/CV Northcoders Jakub Wiszowaty December 2023.pdf'
+import { Link } from 'react-router-dom'
 function Menu({setNav, nav}) {
-  const [menu, setMenu] = useState(false)
   return (
     <section className='section-menu'>
       <div className='name'>
@@ -15,10 +14,10 @@ function Menu({setNav, nav}) {
           <p className='cv-update'>last update</p>
           <p className='cv-update'>7/12/23</p>
         </div>
-        <p className='download'><a href={CV} download="Jakub Wiszowaty CV 2023" >download</a></p>
+        <p className='download'><a href={CV} download="Jakub Wiszowaty CV 2023">download</a></p>
         <p className='view'><a href={CV} target='_blank'>view</a></p>
       </div>
-      <nav>
+      <nav className="web-nav">
         <div className="list">
           {nav === "aoc" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={() => setNav("aoc")}>	&#10052; Advent of Code 2023 	&#10052;</p>}
           {nav === "blender" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={() => setNav("blender")}>Blender</p>}
@@ -26,21 +25,14 @@ function Menu({setNav, nav}) {
           {nav === "personal" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={()=>setNav("personal")}>Personal</p>}
           {nav === "freecodecamp" ? <p className='back' onClick={() => setNav(undefined)}>back</p> : <p className='nav' onClick={()=>setNav("freecodecamp")}>freeCodeCamp</p>}
         </div>
-        <div className="dropdown">
-          {nav !== undefined ? <div className='menu-back'><button className="dropbtn" onClick={() => setMenu(!menu)}>Menu</button><button className='back-btn' onClick={() => {
-            setNav(undefined)
-            setMenu(!menu)
-          }}>back</button></div> : <button className="dropbtn" onClick={() => setMenu(!menu)}>Menu</button>}
-          {menu === true && 
-            <div className="dropdown-content">
-              <p className='nav' onClick={() => setNav("aoc")}>Advent of Code 2023</p>
-              <p className='nav' onClick={() => setNav("blender")}>Blender</p>
-              <p className='nav' onClick={() => setNav("northcoders")}>Northcoders bootcamp</p>
-              <p className='nav' onClick={() => setNav("personal")}>otherPersonal</p>
-              <p className='nav' onClick={() => setNav("freecodecamp")}>freeCodeCamp</p>
-          </div>
-          }
-          
+      </nav>
+      <nav className="mobile-nav">
+        <div className="list">
+          <Link className='nav' to="/aoc2023">	&#10052; Advent of Code 2023 	&#10052;</Link>
+          <Link className='nav' to="/blender">Blender</Link>
+          <Link className='nav' to="/northcoders">Northcoders Bootcamp</Link>
+          <Link className='nav' to="/personal">Personal</Link>
+          <Link className='nav' to="/freecodecamp">freeCodeCamp</Link>
         </div>
       </nav>
     </section>

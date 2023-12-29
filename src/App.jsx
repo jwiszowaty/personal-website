@@ -1,17 +1,19 @@
 import { Route, Routes} from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
-import Northcoders from './components/Northcoders/Northcoders.jsx'
-import Freecodecamp from './components/Pages/Freecodecamp.jsx'
-import Personal from './components/Pages/Personal.jsx'
-import Blender from './components/Pages/Blender'
+import NorthcodersMob from './components/Northcoders/NorthcodersMob.jsx'
+import FreecodecampMob from './components/Pages/Mobile/FreecodecampMob.jsx'
+import PersonalMob from './components/Pages/Mobile/PersonalMob.jsx'
+import BlenderMob from './components/Pages/Mobile/BlenderMob'
+import AocMob from './components/Pages/Mobile/AocMob.jsx'
 function App() {
   return (
     <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/blender" element={<Blender/>} />
-        <Route path="/northcoders" element={<Northcoders/>} />
-        <Route path="/personal" element={<Personal/>} />
-        <Route path="/freecodecamp" element={<Freecodecamp/>} />
+      <Route path="/" element={<Home />} />
+      <Route path="aoc2023" element={<AocMob/>} />
+        <Route path="/blender" element={<BlenderMob/>} />
+        <Route path="/northcoders" element={<NorthcodersMob/>} />
+        <Route path="/personal" element={<PersonalMob/>} />
+        <Route path="/freecodecamp" element={<FreecodecampMob/>} />
     </Routes>
   )
 }
