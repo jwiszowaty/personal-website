@@ -1,4 +1,5 @@
 import React from 'react'
+import Vocabulary from './Vocabulary'
 function Aoc() {
     return (
       <section className='aoc'>

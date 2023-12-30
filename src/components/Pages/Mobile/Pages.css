@@ -67,6 +67,9 @@
     color: orange;
 }
 
+section > div > h2,h3,h4 {
+    color:white;
+}
 h1,
 h2{
     margin: 10px;
@@ -102,6 +105,9 @@ h2{
 }
 }
 @media screen and (max-width:768px) {
+    section > div > h2,h3,h4 {
+        color:white;
+    }
     .projects-section {
         display: flex;
         flex-direction: column;
