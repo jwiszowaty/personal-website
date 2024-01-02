@@ -34,7 +34,6 @@ function Timeline() {
         </div>
         <div className="next container">
           <p>Exploring TypeScript by converting  katas completed using JavaScript during Northcoders bootcamp.</p>
-          <p>Creating mobile version of this website</p>
           <p>FreeCodeCamp - JavaScript Algorithms and Data Structures</p>
           <p>Tailwind CSS</p>
           <p>Angular</p>

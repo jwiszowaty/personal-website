@@ -1,5 +1,5 @@
 import './Menu.css'
-import CV from '../../assets/CV Northcoders Jakub Wiszowaty December 2023.pdf'
+import CV from '../../assets/CV Northcoders Jakub Wiszowaty January 2024.pdf'
 import { Link } from 'react-router-dom'
 function Menu({setNav, nav}) {
   return (
@@ -11,11 +11,11 @@ function Menu({setNav, nav}) {
       <div className='cv'>
         <div className='text'>
           <p>CV</p>
-          <p className='cv-update'>last update</p>
-          <p className='cv-update'>7/12/23</p>
+          <p className='cv-update'>updated on</p>
+          <p className='cv-update'>2/1/24</p>
         </div>
-        <p className='download'><a href={CV} download="Jakub Wiszowaty CV 2023">download</a></p>
-        <p className='view'><a href={CV} target='_blank'>view</a></p>
+        <a href={CV} download="Jakub Wiszowaty CV 2023" className='download'>download</a>
+        <a href={CV} target='_blank' className='view'>view</a>
       </div>
       <nav className="web-nav">
         <div className="list">

@@ -58,18 +58,19 @@
 .download {
     grid-area: download;
     justify-self: left;
+    color:white;
+    font-size: 24px;
 }
 .view {
     grid-area: view;
     justify-self: left;
+    color:white;
+    font-size: 24px;
 }
 /* GENERAL */
 
 p {
     margin: 0;
-}
-a {
-    color:rgb(255, 255, 255);
 }
 a:hover {
     font-weight: bolder;
@@ -117,6 +118,10 @@ a:hover {
         color:#23424D;
     }
     a {
+        color:#23424D;
+        font-size: 20px;
+    }
+    .nav {
         color:#23424D;
         font-size: 20px;
     }

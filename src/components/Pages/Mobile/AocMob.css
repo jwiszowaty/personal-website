@@ -1,5 +1,6 @@
-.aoc > p > a {
+a {
     color:white;
+    font-size: 17px;
 }
 .back {
     color:rgb(255, 255, 0);
