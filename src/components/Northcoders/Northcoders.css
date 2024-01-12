@@ -4,16 +4,25 @@
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
-.project-card {
+.ncnews-card {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border: 1px solid white;
-    margin: 10px;
-    width:80%;
+    margin: 0;
+    width:50%;
+    height:100%;
+    color: white; 
+    background-color: rgb(72, 72, 72);
 }
-
+.ncnews-imgs {
+    display: flex;
+    height: 100%;
+    width: 60%;
+    overflow-x: scroll;
+    padding: 10px;
+}
 .framework {
     flex-wrap: no-wrap;
     overflow-x: scroll; 
@@ -73,19 +82,11 @@ h2{
     text-decoration: none;
 }
 
-.nav-tags:hover {
-    color:rgb(255, 0, 0);
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom:-20px;
-}
-
 .project-imgs {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    width:100%;
-    height:max-content;
+    height:100px;
 }
 
 @media screen and (max-width:1440px) {
@@ -96,12 +97,6 @@ h2{
         width: 100%;
         height: max-content;
         overflow-y: visible;
-    }
-    .projects-section:hover {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: max-content;
     }
     .projects-section::-webkit-scrollbar {
         height: max-content;

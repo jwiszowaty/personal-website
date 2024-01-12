@@ -1,9 +1,8 @@
 * {
   box-sizing: border-box;
-  font-family:'Helvetica';
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 }
 #root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

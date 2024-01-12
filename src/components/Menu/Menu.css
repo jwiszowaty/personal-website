@@ -94,6 +94,12 @@ a:hover {
         margin: 0;
         font-size: 20px;
     }
+    .view {
+        color: #23424D;
+    }
+    .download {
+        color: #23424D;
+    }
     .mobile-nav {
         display: flex;
         justify-content: center;

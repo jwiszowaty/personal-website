@@ -21,7 +21,12 @@ function Timeline() {
   return (
       <section className='timeline-web'>
         <div className="now container">
-          <p>Advent of Code - Practicing JavaScript and TDD</p>
+        <p>Building a React Native app:</p>
+        <ul>
+          <li>MongoDB</li>
+          <li>In-app camera</li>
+          <li>Photo upload</li>
+        </ul>
         </div>
         <div className='update-timeline'>
           <p>NEXT</p>
@@ -41,6 +46,9 @@ function Timeline() {
         </div>
         <div className='flex-done'>
           <div className='timeline'>
+            <p className='january-2024 date'>January</p>
+            <p className='year-2023 year'>2023</p>
+            <p className='december-2023 date'>December</p>
             <p className='november-2023 date'>November</p>
             <p className='october-2023 date'>October</p>
             <p className='september-2023 date'>September</p>
@@ -131,9 +139,13 @@ function Timeline() {
             <p className='february-2017 date'>February</p>
             <p className='january-2017 date'>January</p>
           </div>
-          <div className='jobs-right'>
+        <div className='jobs-right'>
+          <div className="done container aoc2023">
+              <div className="content">
+                <p>Advent of Code - Practicing JavaScript and TDD</p>
+              </div>
+            </div>
             <div className="done container bootcamp">
-              
               <div className="content">
                 <p>Trainee Software Engineer - 13 weeks - Northcoders</p>
               </div>

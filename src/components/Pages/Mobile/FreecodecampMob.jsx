@@ -1,4 +1,4 @@
-import React from 'react'
+import './PagesMob.css'
 import Pform from "../../../assets/freecodecamp-form.png"
 import Ptribute from "../../../assets/freecodecamp-tribute.png"
 import { useNavigate } from 'react-router-dom'

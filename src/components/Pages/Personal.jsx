@@ -3,7 +3,6 @@ import RWT from "../../assets/RenaissanceWT.jpg"
 function Personal() {
   return (
     <section id='personal-section' className='projects-section'>
-      <a href="" className='nav-tags'><h1>Personal</h1></a> 
       <div className='project-card'>
         <a href="https://jwiszowaty.github.io/intro-html-css/" target='_blank' className='project-title'><h2>Renaissance World Tour</h2></a>
         <div className='framework'>

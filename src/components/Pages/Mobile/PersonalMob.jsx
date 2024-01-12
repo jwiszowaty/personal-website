@@ -1,4 +1,4 @@
-import React from 'react'
+import './PagesMob.css'
 import RWT from "../../../assets/RenaissanceWT.jpg"
 import { useNavigate } from 'react-router-dom'
 function PersonalMob() {

@@ -7,7 +7,7 @@ import News4 from "../../assets/northcoders-news4.png"
 function Northcoders() {
   return (
     <section id='northcoders-section' className='projects-section'>
-      <div className='project-card'>
+      <div className='ncnews-card'>
         <a href="https://luminous-sunshine-fe3228.netlify.app/" target='_blank' className='project-title'><h2>News app</h2></a>
         <div className='framework'>
         <h4>Node.js</h4>
@@ -20,7 +20,7 @@ function Northcoders() {
         <a href="https://github.com/jwiszowaty/be-jw-news" target="_blank" className='github-link'><h3>GitHub</h3></a>
         <a href="https://be-jw-news.onrender.com/api" className='github-link' target="_blank"><h3>API endpoints</h3></a>
         <a href="https://luminous-sunshine-fe3228.netlify.app/" className='github-link' target="_blank"><h3>Web view</h3></a>
-        <div id='news-img' className='project-imgs'>
+        <div className='ncnews-imgs'>
           <img className='project-img' src={News1} alt="" />
           <img className='project-img' src={News2} alt="" />
           <img className='project-img' src={News3} alt="" />

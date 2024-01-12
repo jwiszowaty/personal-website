@@ -1,17 +1,20 @@
 @media screen and (min-width:769px){
 .project-img {
     width:100%;
+    height: 90%;
     border-top: 2px solid white;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    padding: 10px;
 }
 .projects-section {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y:hidden;
+    padding: 10px
 }
 .projects-section::-webkit-scrollbar {
     height: 0px;
@@ -19,18 +22,31 @@
 .project-card {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: 0;
+    width:max-content;
+    height:100%;
+    color: white; 
+    background-color: rgb(72, 72, 72);
+}
+.dwt-card {
+    display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     border: 1px solid white;
-    margin: 10px;
-    width:30%;
-    height:80%;
+    margin: 0;
+    width:50%;
+    height:100%;
+    color: white; 
+    padding: 10px;
+    background-color: rgb(72, 72, 72);
 }
-
 .framework {
     flex-wrap: no-wrap;
     overflow-x: scroll; 
-    width: 90%;
+    width: max-content;
     white-space: nowrap;
     scroll-snap-type: x mandatory;
 }
@@ -86,32 +102,15 @@ h2{
     text-decoration: none;
 }
 
-.nav-tags:hover {
-    color:rgb(255, 0, 0);
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom:-20px;
-}
-
 .project-imgs {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    width:100%;
-    height:max-content;
+    width:max-content;
+    height:100%;
+    padding: 10px;
 }
+.project-card > a:last-of-type {
+    margin-bottom: 40px;;
 }
-@media screen and (max-width:768px) {
-    .projects-section {
-        background-color: #23424D;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: max-content;
-        overflow-y: visible;
-    }
-    .projects-section::-webkit-scrollbar {
-        height: max-content;
-    }
 }

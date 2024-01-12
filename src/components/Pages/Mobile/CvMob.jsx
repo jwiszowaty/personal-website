@@ -1,4 +1,4 @@
-import React from 'react'
+import './PagesMob.css'
 import CV from '../assets/CV Northcoders Jakub Wiszowaty November 2023.pdf'
 function CvMob() {
   return (

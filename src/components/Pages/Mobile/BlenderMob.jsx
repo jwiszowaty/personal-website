@@ -1,9 +1,8 @@
-import React from 'react'
 import P1 from "../../../assets/Blender-P1.png"
 import P1Acc from "../../../assets/Blender-P1-Acc.webp"
 import P2 from "../../../assets/Blender-P2.png"
 import P3 from "../../../assets/Blender-P3.png"
-import './Pages.css'
+import './PagesMob.css'
 import { useNavigate } from 'react-router-dom'
 function BlenderMob() {
   const navigate = useNavigate()

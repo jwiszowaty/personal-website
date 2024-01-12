@@ -154,6 +154,9 @@ h3 {
             transparent 10px
         );
         grid-template-areas: 
+        "january-2024"
+        "year-2023"
+        "december-2023"
         "november-2023"
         "october-2023"
         "september-2023"
@@ -476,14 +479,22 @@ h3 {
         border-bottom-right-radius: 0;
         position: relative;
     }
+    .aoc2023.container {
+        margin-top:15px;
+        background: #ffff0080;
+        height: 50px;
+    }
+    .aoc2023 > .content {
+        background: transparent;
+        border-bottom-right-radius: 0;
+    }
     .bootcamp.container {
-        margin-top:10px;
+        margin-top:20px;
         background: rgba(255, 0, 0, 0.5);
-        height: min-content;
+        height: 75px;
     }
     .bootcamp > .content {
         background: transparent;
-        height: 75px;
         border-bottom-right-radius: 0;
     }
     .basics.container {
@@ -496,7 +507,7 @@ h3 {
         border-top-right-radius: 0;
     }
     .newchem2.container {
-        margin-top: 135px;
+        margin-top: 215px;
         background: #ffff0080;
         height:330px;
     }
