@@ -1,0 +1,21 @@
+.projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #23424D;
+}
+.projects > .back-button {
+    width: 80px;
+    font-size: 20px;
+    border: 2px solid white;
+    background-color: white;
+    color: #23424D;
+    border-radius: 50px;
+    margin: 20px 0 20px 0;
+}
+.projects > .back-button:hover {
+    background-color: rgb(123, 123, 123);
+    color: white;
+}

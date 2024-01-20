@@ -122,8 +122,8 @@ h3 {
         background: linear-gradient(
             to bottom,
             rgba(128, 135, 102, 0.7),
-            rgba(128, 135, 102, 0.7) 10px,
-            transparent 10px
+            rgba(128, 135, 102, 0.7) 15px,
+            transparent 15px
         )
     }
     .jobs-left {
@@ -132,8 +132,8 @@ h3 {
         background: linear-gradient(
             to bottom,
             rgba(195, 103, 16, 0.7),
-            rgba(195, 103, 16, 0.7) 10px,
-            transparent 10px
+            rgba(195, 103, 16, 0.7) 15px,
+            transparent 15px
         )
     }
     .timeline {
@@ -150,8 +150,8 @@ h3 {
         background: linear-gradient(
             to bottom,
             rgba(195, 103, 16, 0.7) 0px,
-            rgba(195, 103, 16, 0.7) 10px,
-            transparent 10px
+            rgba(195, 103, 16, 0.7) 15px,
+            transparent 15px
         );
         grid-template-areas: 
         "january-2024"

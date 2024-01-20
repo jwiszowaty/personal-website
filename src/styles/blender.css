@@ -1,0 +1,59 @@
+
+    .blender > .cards > .card > .title {
+        margin: 0;
+    }
+    .blender {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #23424D;
+        overflow: scroll;
+    }
+    .blender > .cards > .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid white;
+        width: min(90vw, 1000px);
+        height: max-content;
+        color: white; 
+        padding: 10px;
+        margin: 10px;
+        background-color: rgb(72, 72, 72);
+    }
+    .blender > .cards > .card > .imgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blender > .cards > .card > .imgs > .img {
+        width: 100%;
+        margin: 10px;
+    }
+    .blender > .cards > .card > .img {
+        width: 100%;
+        margin: 10px;
+    }
+    .blender > .back-button {
+        width: 80px;
+        font-size: 20px;
+        border: 2px solid white;
+        background-color: white;
+        color: #23424D;
+        border-radius: 50px;
+        margin: 20px;
+    }
+    .blender > .back-button:hover {
+        background-color: rgb(123, 123, 123);
+        color: white;
+    }
+    .blender > .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+        height: 100%;
+        overflow: scroll;
+    }
