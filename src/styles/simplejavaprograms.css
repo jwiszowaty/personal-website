@@ -1,0 +1,12 @@
+.sjp-field {
+    background-color: aliceblue;
+    width: 15vw;
+    height: 25vh;
+}
+.sjp-input {
+    height: 20px;
+}
+.sjp-submit {
+    height: 20px;
+    width:auto;
+}

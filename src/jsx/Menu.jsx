@@ -26,6 +26,7 @@ function Menu() {
         <a href={CV} target='_blank' className='view'>view</a>
       </div>
       <nav className="nav">
+        <Link to="/sjp">Simple Java Programs</Link>
         <Link to="/projects">Coding projects</Link>
         <Link to="/aoc2023">	&#10052; Advent of Code 2023 	&#10052;</Link>
         <Link to="/blender">Blender</Link>

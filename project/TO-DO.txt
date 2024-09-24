@@ -1,0 +1,4 @@
+screenshot current website
+research how to embed java Spring.io in React.js
+end:
+    - remove form
