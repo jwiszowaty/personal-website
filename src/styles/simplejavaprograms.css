@@ -1,7 +1,21 @@
+.sjp-fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
 .sjp-field {
-    background-color: aliceblue;
-    width: 15vw;
-    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: max-content;
+    height: max-content;
+    column-gap: 20px;
+    align-items: center;
+}
+.sjp-field > p {
+    font-size: auto;
+    width:300px;
+    margin:0;
 }
 .sjp-input {
     height: 20px;
