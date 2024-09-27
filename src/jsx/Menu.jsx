@@ -23,10 +23,8 @@ function Menu() {
           <Link to="/aoc2023">	&#10052; Advent of Code 2023 	&#10052;</Link>
           <Link to="/blender">Blender</Link>
         </nav>
-        <section className='sjp'>
-          <SimpleJavaPrograms/>
-        </section>
       </section>
+          <SimpleJavaPrograms/>
       
     </>
   )

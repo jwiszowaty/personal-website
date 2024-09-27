@@ -1,32 +1,25 @@
 .menu {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: 10%;
     display: grid;
-    grid-template-areas: "name nav"
-    "sjp sjp";
-    grid-template-columns: auto;
-    grid-template-rows: 15% auto;
-    column-gap: min(50px, 10vh);
+    grid-template-areas: "name nav";
     color:#23424D;
-    background-color: #00b3ff;
+    background-color: #23424D;
 }
-.sjp {
-    grid-area: sjp;
-    display: grid;
-    grid-template-areas: "title"
-    "sjps";
+.name, .nav {
+    background-color: aliceblue;
 }
 .name {
     grid-area: name;
     display: flex;
     column-gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     color: rgba(35, 66, 77);
     letter-spacing: 5px;
     font-size: min(15px, 7vw);
+    padding: 10px;
+
 }
 .first, .surname {
     margin: 0px;
@@ -34,15 +27,17 @@
 .nav {
     grid-area: nav;
     display: flex;
-    justify-content: space-evenly;
-    font-size: min(auto, 10vw);
+    font-size: min(15px, 10vw);
     align-items: center;
+    justify-content: right;
+    column-gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .nav > a {
     color:#23424D;
-    font-size: min(auto, 7vw);
+    width: calc(70%/5)
 }
 .nav > a:hover {
-    font-weight: bolder;
     font-weight: bolder;
 }
