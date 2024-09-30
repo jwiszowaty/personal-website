@@ -10,24 +10,19 @@ function Blender() {
     <>
       <Menu/>
     <section className='blender'>
-      <Link className="back-button" to="/">back</Link>
-        <div className="cards">
-          <div className='dwt card'>
-            <h2 className='dwt title'>Diamond World Tour Rihanna</h2>
-            <div className='dwt imgs'>
-              <img className='dwt img' src={P1} alt="" />
-              <img className='dwt img' src={P1Acc} alt="" />
-            </div>
+          <div className='card'>
+            <h2 className='title'>Diamond World Tour Rihanna</h2>
+              <img className='img' src={P1} alt="" />
+              <img className='img' src={P1Acc} alt="" />
           </div>
-          <div className='SGfeel card'>
-            <h2 className='SGfeel title'>Inspired by Selena Gomez "Feel Me"</h2>
-            <img className='SGfeel img' src={P2} alt="" />
+          <div className='card'>
+            <h2 className='title'>Inspired by Selena Gomez "Feel Me"</h2>
+            <img className='img' src={P2} alt="" />
           </div>
-          <div className='BAmerica card'>
-            <h2 className='BAmerica title'>Inspired by Beyoncé "America Has A Problem" Live</h2>
-            <img className='BAmerica img' src={P3} alt="" />
+          <div className='card'>
+            <h2 className='title'>Inspired by Beyoncé "America Has A Problem" Live</h2>
+            <img className='img' src={P3} alt="" />
           </div>
-        </div>
     </section>
   </>
   )

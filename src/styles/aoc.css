@@ -1,22 +1,10 @@
 .aoc-2023 {
     font-size: 19px;
+    color: black;
 }
 .aoc-2023 > .title {
-    color:white;
     font-size: larger;
     margin: 10px;
-}
-.aoc-2023 > .task {
-    color: white
-}
-.aoc-2023 > .task:hover {
-    background-color:#23424D
-}
-.aoc-2023 > a {
-    color:white;
-}
-.aoc-2023 > .update {
-    color: yellow;
 }
 .aoc-2023 > .list {
     display: flex;
@@ -26,7 +14,7 @@
 }
 .aoc-2023 > .message {
     margin-top: 50px;
-    color:white;
+    
 }
 .aoc-2023 > p {
     margin: 0 10px 0 10px;
@@ -34,12 +22,11 @@
 .aoc-2023 > .back-button {
     width: 80px;
     font-size: 20px;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     background-color: white;
     color: #23424D;
     border-radius: 50px;
 }
 .aoc-2023 > .back-button:hover {
     background-color: rgb(123, 123, 123);
-    color: white;
 }
