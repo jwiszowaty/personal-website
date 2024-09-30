@@ -8,11 +8,10 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="" element={<Menu />} />
+      <Route path="" element={<SimpleJavaPrograms/>} />
       <Route path="/aoc2023" element={<Aoc/>} />
       <Route path="/blender" element={<Blender/>} />
       <Route path="/projects" element={<Projects/>} />
-      <Route path="sjp" element={<SimpleJavaPrograms/>}/>
     </Routes>
     </>
   )

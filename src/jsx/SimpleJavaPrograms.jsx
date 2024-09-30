@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import '../styles/simplejavaprograms.css'
 import udemyJava from './sjpObject'
+import Menu from './Menu'
 
 function SimpleJavaPrograms() {
     const [isDisabled, setIsDisabled] = useState(false)
@@ -12,6 +13,7 @@ function SimpleJavaPrograms() {
     const generateProgramFields = () => {
         return (
             <section className='udemy-java'>
+                <h3>Exercises completed in the Java Masterclass Udemy course</h3>
                 {
                 udemyJava.map(({section, methods}) => {
                     return (
@@ -92,8 +94,8 @@ function SimpleJavaPrograms() {
     }
     return (
         <>
-        <h3>Exercises completed in the Java Masterclass Udemy course</h3>
-        {generateProgramFields()}
+            <Menu />
+            {generateProgramFields()}
         </>
     )
 }

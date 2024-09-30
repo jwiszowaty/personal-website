@@ -1,0 +1,95 @@
+.emphasise {
+    color:red;
+    text-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+.emphasise-message-1 {
+    color:yellow;
+    text-shadow: 0 0 5px yellow;
+}
+.emphasise-message-2 {
+    color:magenta;
+    text-shadow: 0 0 5px magenta;
+    font-weight:400;
+}
+.emphasise-message-3 {
+    color:rgb(0, 255, 255);
+    text-shadow: 0 0 5px rgb(0, 255, 255);
+    font-weight:400;
+}
+.emphasise-message-4 {
+    color:rgb(0, 255, 0);
+    text-shadow: 0 0 5px rgb(0, 255, 0);
+    font-weight:400;
+}
+#name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size: 30px;
+}
+#name > h1 {
+    color:transparent;
+    text-shadow: 0 0 15px white;
+    -webkit-text-stroke: 1px rgb(255, 242, 143);
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:max-content;
+    margin:0;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 3px rgb(255, 255, 255) inset;
+    border: 2px solid white;
+}
+.statement-container {
+    display: flex;
+    flex-direction: row;
+    width:max-content;
+    padding-left:20px;
+    padding-right:20px;
+}
+.statement-container > h4 {
+    font-size: 1.2rem;
+    margin:0;
+    margin-left: 5px;
+    font-weight:400;
+}
+@media screen and (max-width:1440px) {
+    .statement-container {
+        display: flex;
+        flex-direction: column;
+        width:max-content;
+    }
+    .statement-container > h4 {
+        font-size: 0.9rem;
+        margin:0;
+        margin-left: 5px;
+        font-weight:400;
+    }
+    #statement {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        font-size: 20px;
+    }
+    #header {
+        flex-direction: column;
+        
+    }
+}

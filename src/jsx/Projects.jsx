@@ -10,8 +10,11 @@ import "../styles/northcoders.css"
 import "../styles/personal.css"
 import "../styles/freecodecamp.css"
 import "../styles/projects.css"
+import Menu from "./Menu"
 function Projects() {
   return (
+    <>
+      <Menu/>
     <div className="projects">
       <Link className="back-button" to="/">back</Link>
       <div className='northcoders'>
@@ -63,6 +66,7 @@ function Projects() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

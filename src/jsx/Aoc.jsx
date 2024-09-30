@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import '../styles/Aoc.css'
+import Menu from './Menu'
 function Aoc() {
-    return (
+  return (
+    <>
+      <Menu/>
       <section className='aoc-2023'>
         <div className='aoc-2023 list'>
         <Link className="back-button" to="/">back</Link>
@@ -20,7 +23,7 @@ function Aoc() {
         <p>and I will analyse others' code to learn how to make the method more efficient.</p>
         </div>
       </section>
-      
+      </>
   )
 }
 

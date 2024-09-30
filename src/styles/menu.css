@@ -1,42 +1,37 @@
 .menu {
-    width: 100%;
-    height: 10%;
-    display: grid;
-    grid-template-areas: "name nav";
+    width: 100vw;
+    column-gap: 10vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color:#23424D;
-    background-color: #23424D;
-}
-.name, .nav {
     background-color: aliceblue;
 }
 .name {
-    grid-area: name;
     display: flex;
     column-gap: 20px;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     color: rgba(35, 66, 77);
     letter-spacing: 5px;
     font-size: min(15px, 7vw);
     padding: 10px;
-
 }
 .first, .surname {
     margin: 0px;
 }
 .nav {
-    grid-area: nav;
     display: flex;
+    flex-wrap: wrap;
     font-size: min(15px, 10vw);
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     column-gap: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 .nav > a {
     color:#23424D;
-    width: calc(70%/5)
+    width: 90px;
 }
 .nav > a:hover {
     font-weight: bolder;

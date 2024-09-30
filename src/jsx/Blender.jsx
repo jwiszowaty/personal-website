@@ -4,8 +4,11 @@ import P2 from "../assets/Blender-P2.png"
 import P3 from "../assets/Blender-P3.png"
 import '../styles/Blender.css'
 import { Link } from "react-router-dom"
+import Menu from "./Menu"
 function Blender() {
   return (
+    <>
+      <Menu/>
     <section className='blender'>
       <Link className="back-button" to="/">back</Link>
         <div className="cards">
@@ -26,6 +29,7 @@ function Blender() {
           </div>
         </div>
     </section>
+  </>
   )
 }
 
