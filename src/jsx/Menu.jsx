@@ -1,5 +1,5 @@
 import '../styles/menu.css'
-import CV from '../assets/CV Northcoders Jakub Wiszowaty January 2024.pdf'
+import CV from '../assets/CV Jakub Wiszowaty September 2024.pdf'
 import { Link } from 'react-router-dom'
 function Menu() {
   return (
