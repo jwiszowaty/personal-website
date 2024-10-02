@@ -19,3 +19,12 @@
     background-color: rgb(123, 123, 123);
     color: white;
 }
+.information {
+    background-color: #7fffd4;
+    border-top: 10px double aliceblue;
+    border-bottom: 10px double white;
+}
+.information > p > a {
+    color: #504646;
+    font-weight: bolder;
+}

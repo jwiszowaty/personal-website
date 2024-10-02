@@ -14,7 +14,10 @@ import Menu from "./Menu"
 function Projects() {
   return (
     <>
-      <Menu/>
+      <Menu clicked='Coding projects' />
+      <div className="information">
+        <p>It's a true joy seeing how the <Link to="/archive" className="link">designs of my website</Link> evolve. There are design updates planned for this section too.</p>
+      </div>
     <div className="projects">
         <div className='northcoders'>
         <div className='ncnews'>

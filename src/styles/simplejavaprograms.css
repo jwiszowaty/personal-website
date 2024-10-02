@@ -39,7 +39,8 @@
     border: solid 2px black;
     background-color: azure;
 }
-.sjp-field > p {
+.sjp-field > h4 {
+    font-weight: 570;
     font-size: auto;
     width:300px;
     margin:0;
@@ -59,4 +60,10 @@
     margin: 0;
     margin-left:10px;
     margin-right:10px;
+}
+.boolean-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
 }

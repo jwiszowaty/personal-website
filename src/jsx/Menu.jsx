@@ -1,19 +1,25 @@
 import '../styles/menu.css'
-import CV from '../assets/CV Jakub Wiszowaty September 2024.pdf'
+import CV from "../assets/CV Jakub Wiszowaty October 2024.pdf"
 import { Link } from 'react-router-dom'
-function Menu() {
+function Menu({ clicked }) {
+  const tabs = [{tab: 'Simple Java Programs', endpoint: '/'}, {tab: 'Coding projects', endpoint: '/projects'}, {tab: '❄️ Advent of Code ❄️', endpoint: '/aoc'}, {tab: 'Blender', endpoint: '/blender'}]
   return (
       <section className='menu'>
         <div className='name'>
           <h1 className='first'>Jakub</h1>
           <h1 className='surname'>Wiszowaty</h1>
         </div>
-        <nav className="nav">
-          <Link to={CV} target='_blank'>CV</Link>
-          <Link to="/">Simple Java Programs</Link>
-          <Link to="/projects">Coding projects</Link>
-          <Link to="/aoc2023">	&#10052; Advent of Code 2023 	&#10052;</Link>
-          <Link to="/blender">Blender</Link>
+      <nav className="nav">
+        <Link to={CV} target='_blank'>CV</Link>
+          {
+          tabs.map(({ tab, endpoint }) => {
+            if (clicked == tab) {
+              return <p className="active">{tab}</p>
+            } else {
+              return <Link to={endpoint}>{tab}</Link>
+            }
+            })
+          }
         </nav>
       </section>
   )

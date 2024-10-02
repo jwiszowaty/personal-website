@@ -27,9 +27,25 @@ function SimpleJavaPrograms() {
                                     return (
                                         
                                             <section className="sjp-field">
-                                                <p>{title}</p>
-                                                { inputs.map(input => <input value={args[input] && answer[0] == endpoint ? args[input] : ""} className="sjp-input" placeholder={input} onChange={(e) => handleInput(endpoint, input, e)}/>)}
-                                                <button disabled={isDisabled} className="sjp-submit" onClick={() => sendGetRequest(endpoint)}>Calculate</button>
+                                                <h4>{title}</h4>
+                                            {inputs.map(({label, placeholder}) => {
+                                                if (/^is/.test(placeholder) ) {
+                                                    return (
+                                                        <div className='boolean-input'>
+                                                            <p>{label}</p>
+                                                            <label><input type='radio' name={placeholder} value='true'/> Yes</label>
+                                                            <label><input type='radio' name={placeholder} value='false'/> No</label>
+                                                        </div>
+                                                    )
+                                                } else {
+                                                    return <label>{label}<input value={args[placeholder] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, placeholder, e)}/></label>
+                                                }
+                                            })}
+                                            <button type='submit' disabled={isDisabled} className="sjp-submit" onClick={() => sendGetRequest(endpoint)}>
+                                                {
+                                                /\?$/.test(title) ? 'Check' : 'Calculate'
+                                                }
+                                                </button>
                                                 { (answer[0] == endpoint && answer[2]) ? <><pre className='answer'>{answer[1]} </pre></> : "" }
                                             </section>
                                     )
@@ -90,11 +106,15 @@ function SimpleJavaPrograms() {
         }
     }
     const toggleDropdown = (section) => {
-        setDropdown(!!dropdown ? null : section)
+        if (dropdown == section) {
+            setDropdown(!!dropdown ? null : section)
+        } else {
+            setDropdown(section)
+        }
     }
     return (
         <>
-            <Menu />
+            <Menu clicked='Simple Java Programs'/>
             {generateProgramFields()}
         </>
     )

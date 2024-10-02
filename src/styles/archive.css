@@ -1,0 +1,10 @@
+.archive-pictures {
+    display: flex;
+    height:max-content;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 20px 0px 20px 0px;
+}
+.archive-pictures > img {
+    height:700px;
+}

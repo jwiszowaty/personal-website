@@ -4,7 +4,7 @@ import Menu from './Menu'
 function Aoc() {
   return (
     <>
-      <Menu/>
+      <Menu clicked='❄️ Advent of Code ❄️'/>
       <section className='aoc-2023'>
         <div className='aoc-2023 list'>
         <a className='aoc-2023 title' href='https://github.com/jwiszowaty/AoC-2023' target='_blank'>ADVENT OF CODE 2023</a>
