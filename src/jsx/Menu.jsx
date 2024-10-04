@@ -12,11 +12,11 @@ function Menu({ clicked }) {
       <nav className="nav">
         <Link to={CV} target='_blank'>CV</Link>
           {
-          tabs.map(({ tab, endpoint }) => {
+          tabs.map(({ tab, endpoint}, index) => {
             if (clicked == tab) {
-              return <p className="active">{tab}</p>
+              return <p className="active" key={index}>{tab}</p>
             } else {
-              return <Link to={endpoint}>{tab}</Link>
+              return <Link to={endpoint} key={index}>{tab}</Link>
             }
             })
           }

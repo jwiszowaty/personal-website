@@ -4,30 +4,30 @@
     align-items: center;
     overflow-y:scroll;
     width: 100vw;
-    height: max-content;
+    height: 100%;
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;  /*Firefox*/
 }
 .udemy-java::-webkit-scrollbar {
     display: none;
 }
 .dropdown-button {
     width: 80%;
-    height: 30px;
+    height: 300px;
 }
 .sjp-fields {
     display: flex;
     flex-direction: row;
     justify-content: center;
     row-gap: 10px;
-    overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    height: 400px;
+    min-height: 400px;
     flex-wrap: wrap;
-    width:80%;
+    width: 80%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    border-left: 0.5px solid rgb(177, 177, 177);
+    border-left: .5px solid rgb(177,177,177)
 }
 .sjp-field {
     display: flex;
@@ -38,6 +38,7 @@
     justify-content: center;
     border: solid 2px black;
     background-color: azure;
+    height: max-content;
 }
 .sjp-field > h4 {
     font-weight: 570;

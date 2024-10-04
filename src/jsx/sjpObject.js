@@ -6,113 +6,113 @@ const udemyJava = [
                 "title": "Sum Even Digits",
                 "endpoint": "even-digit-sum",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Diagonal Star",
                 "endpoint": "diag-star",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Factor Printer",
                 "endpoint": "factor-printer",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Largest Prime",
                 "endpoint": "largest-prime",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Number In Word",
                 "endpoint": "number-in-word",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Is Palindrome?",
                 "endpoint": "palindrome",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Is It Perfect?",
                 "endpoint": "perfect-number",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Sum the first and the last digit",
                 "endpoint": "first-last-digit-sum",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Can you spell the number, please?",
                 "endpoint": "number-to-words",
                 "inputs": [
-                    {label: "", placeholder:"number"}
+                    {label: "", placeholder:"number", param: "number", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Greatest Common Divisor",
                 "endpoint": "greatest-common-divisor",
                 "inputs": [
-                    {label: "", placeholder:"number1"},
-                    {label: "", placeholder:"number2"}
+                    {label: "", placeholder:"number1", param: "number1", defaultValue: undefined},
+                    {label: "", placeholder:"number2", param: "number2", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Flour Packer - Will It Fit?",
                 "endpoint": "flour-packer",
                 "inputs": [
-                    {label: "", placeholder:"fiveKilo"}, {label: "", placeholder:"oneKilo"}, {label: "", placeholder:"goal"}
+                    {label: "", placeholder:"fiveKilo", param: "fiveKilo", defaultValue: undefined}, {label: "", placeholder:"oneKilo", param: "oneKilo", defaultValue: undefined}, {label: "", placeholder:"goal", param: "goal", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Days In A Month",
                 "endpoint": "days-in-month",
                 "inputs": [
-                    { label: "", placeholder: "month" },
-                    { label: "", placeholder: "year" }
+                    { label: "", placeholder: "month",param: "month", defaultValue: undefined},
+                    { label: "", placeholder: "year", param: "year", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Sum Odd Numbers in A Range",
                 "endpoint": "sum-odd-range",
                 "inputs": [
-                    { label: "", placeholder: "start" },
-                    { label: "", placeholder: "end" }
+                    { label: "", placeholder: "start", param: "start", defaultValue: undefined},
+                    { label: "", placeholder: "end", param: "end", defaultValue: undefined}
                 ]
             },
             {
                 "title": "Do They Have A Digit In Common?",
                 "endpoint": "shared-digit",
                 "inputs": [
-                    {label: "", placeholder:"number1"},
-                    {label: "", placeholder:"number2"}
+                    {label: "", placeholder:"number1", param: "number1", defaultValue: undefined},
+                    {label: "", placeholder:"number2", param: "number2", defaultValue: undefined}
                 ]
             },
             {
                 "title": "How many paint buckets to buy?",
                 "endpoint": "paint-job",
                 "inputs": [
-                    {label: "", placeholder: "area"},
-                    {label: "", placeholder:"width"},
-                    {label: "", placeholder:"height"},
-                    {label: "", placeholder:"areaPerBucket"},
-                    {label: "", placeholder: "extraBuckets"}
+                    {label: "", placeholder: "area", param: "area", defaultValue: undefined},
+                    {label: "", placeholder:"width", param: "width", defaultValue: undefined},
+                    {label: "", placeholder:"height", param: "height", defaultValue: undefined},
+                    {label: "", placeholder:"areaPerBucket", param: "areaPerBucket", defaultValue: undefined},
+                    {label: "", placeholder: "extraBuckets", param: "extraBuckets", defaultValue: undefined}
                 ]
             }
         ],
@@ -129,14 +129,14 @@ const udemyJava = [
                 "title": "Circle/Rectangle Area Calculator",
                 "endpoint": "area-calc",
                 "inputs": [
-                    { label: "height / radius:", placeholder:"number1"},
-                    {label: "width:", placeholder:"number2"}
+                    { label: "height / radius:", placeholder:"number1", param: "number1", defaultValue: undefined},
+                    {label: "width (for circle, enter -1):", placeholder:"number2", param: "number2", defaultValue: -1}
                 ]
             },
             {
-                "title": "Am I Awake?",
+                "title": "Should I wake up?",
                 "endpoint": "awake",
-                "inputs": [{label: "Is any dog barking?", placeholder:"isDogBarking"},{label: "What time is it?", placeholder:"HHMM"}]
+                "inputs": [{label: "Is any dog barking?", placeholder:"isDogBarking", param: "isBarking", defaultValue: undefined},{label: "What time is it?", placeholder:"eg. 22", param: "time", defaultValue: undefined}]
             },
         ],
     },

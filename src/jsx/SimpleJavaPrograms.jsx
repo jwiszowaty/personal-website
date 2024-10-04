@@ -15,30 +15,30 @@ function SimpleJavaPrograms() {
             <section className='udemy-java'>
                 <h3>Exercises completed in the Java Masterclass Udemy course</h3>
                 {
-                udemyJava.map(({section, methods}) => {
+                udemyJava.map(({section, methods}, index) => {
                     return (
                         <>
-                            <button id={section} disabled={methods.length == 0}className='dropdown-button' onClick={() => toggleDropdown(section)}>{section}</button>
+                            <button id={section} key={"button"+index} disabled={methods.length == 0}className='dropdown-button' onClick={() => toggleDropdown(section)}>{section}</button>
                             { 
                             dropdown == section ? (
-                            <section className='sjp-fields'>
+                            <section className='sjp-fields' key={"section"+index}>
                             {
-                                methods.map(({title, endpoint, inputs}) => {
+                                methods.map(({title, endpoint, inputs}, index) => {
                                     return (
                                         
-                                            <section className="sjp-field">
-                                                <h4>{title}</h4>
-                                            {inputs.map(({label, placeholder}) => {
+                                            <section className="sjp-field" key={title+index}>
+                                                <h4 key={title}>{title}</h4>
+                                            {inputs.map(({label, placeholder, param, defaultValue}, index) => {
                                                 if (/^is/.test(placeholder) ) {
                                                     return (
-                                                        <div className='boolean-input'>
-                                                            <p>{label}</p>
-                                                            <label><input type='radio' name={placeholder} value='true'/> Yes</label>
-                                                            <label><input type='radio' name={placeholder} value='false'/> No</label>
+                                                        <div className='boolean-input' key={"radio"+index}>
+                                                            <p key={label+index}>{label}</p>
+                                                            <label key={"true"}><input type='radio' name={placeholder} value='true' checked={args[param] == "true"} onChange={() => handleSelection(endpoint, param, "true")}/> Yes</label>
+                                                            <label key={"false"}><input type='radio' name={placeholder} value='false' checked={args[param] == "false"} onChange={() => handleSelection(endpoint, param, "false")}/> No</label>
                                                         </div>
                                                     )
-                                                } else {
-                                                    return <label>{label}<input value={args[placeholder] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, placeholder, e)}/></label>
+                                                } else { 
+                                                    return <label>{label}<input key={placeholder+index} value={args[param] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, param, e)}/></label>
                                                 }
                                             })}
                                             <button type='submit' disabled={isDisabled} className="sjp-submit" onClick={() => sendGetRequest(endpoint)}>
@@ -61,16 +61,21 @@ function SimpleJavaPrograms() {
             </section>
         )
     }
-    const handleInput = (method, key, e) => {
-        e.preventDefault()
-        setAnswer([method, answer[1], false])
-        setArgs({...args, [key]: e.target.value})
+    const handleSelection = (endpoint, param, selection) => {
+        setAnswer([endpoint, answer[1], false])
+        setArgs({...args, [param]: selection})
     }
-    const sendGetRequest = async (method) => {
+    const handleInput = (endpoint, param, e) => {
+        e.preventDefault()
+        
+            setAnswer([endpoint, answer[1], false])
+            setArgs({...args, [param]: e.target.value}) 
+    }
+    const sendGetRequest = async (endpoint) => {
         setIsDisabled(true)
-        setAnswer([method, "wait...", true])
+        setAnswer([endpoint, "wait...", true])
     
-        const url = buildUrl(method)
+        const url = buildUrl(endpoint)
         
         await axios({
             url: url,
@@ -79,7 +84,7 @@ function SimpleJavaPrograms() {
         .then((response) => {
             console.log(response);
             
-            setAnswer([answer[0], method == "diag-star" ? response.data : JSON.stringify(response.data), true])
+            setAnswer([answer[0], endpoint == "diag-star" ? response.data : JSON.stringify(response.data), true])
         })
         .catch((error) => {
             console.log(error)
@@ -88,8 +93,8 @@ function SimpleJavaPrograms() {
         setIsDisabled(false)
         setArgs({})
     }
-    const buildUrl = (method) => {
-        let url = `https://testrestapi-latest.onrender.com/api/${method}`
+    const buildUrl = (endpoint) => {
+        let url = `https://testrestapi-latest.onrender.com/api/${endpoint}`
         const params = Object.keys(args)
         const lastArgument = params.length - 1
         if (params.length == 1) {
