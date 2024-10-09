@@ -8,7 +8,7 @@ import Menu from "./Menu"
 function Blender() {
   return (
     <>
-      <Menu/>
+      <Menu clicked={"Blender"}/>
     <section className='blender'>
           <div className='card'>
             <h2 className='title'>Diamond World Tour Rihanna</h2>
