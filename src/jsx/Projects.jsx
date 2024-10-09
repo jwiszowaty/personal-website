@@ -15,7 +15,7 @@ function Projects() {
   return (
     <>
       <Menu clicked='Coding projects' />
-      <div className="information">
+      <div className="information turquoise">
         <p>It's a true joy seeing how the <Link to="/archive" className="link">designs of my website</Link> evolve. There are design updates planned for this section too.</p>
       </div>
     <div className="projects">

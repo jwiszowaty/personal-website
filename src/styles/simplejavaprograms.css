@@ -5,6 +5,7 @@
     overflow-y:scroll;
     width: 100vw;
     height: 100%;
+    margin-bottom: 30px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /*Firefox*/
 }
@@ -59,8 +60,36 @@
 }
 .answer {
     margin: 0;
-    margin-left:10px;
-    margin-right:10px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 166, 0);
+    align-items: center;
+}
+.string {
+    display: flex;
+    display: flex;
+    height: 100%;
+    font-weight: bolder;
+    margin: 0;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.false {
+    background-color: red;
+    color: aliceblue;
+}
+.true {
+    background-color: greenyellow;
+}
+.boolean {
+    display: flex;
+    height: 100%;
+    font-weight: bolder;
+    margin: 0;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
 }
 .boolean-input {
     display: flex;

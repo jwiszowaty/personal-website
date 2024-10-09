@@ -20,9 +20,14 @@
     color: white;
 }
 .information {
-    background-color: #7fffd4;
     border-top: 10px double aliceblue;
     border-bottom: 10px double white;
+}
+.turquoise {
+    background-color: #7fffd4;
+}
+.yellow {
+    background-color: yellow;
 }
 .information > p > a {
     color: #504646;

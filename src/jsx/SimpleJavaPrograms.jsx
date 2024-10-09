@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import '../styles/simplejavaprograms.css'
+
+import "../styles/projects.css" // css for .information
 import udemyJava from './sjpObject'
 import Menu from './Menu'
 
@@ -29,16 +31,16 @@ function SimpleJavaPrograms() {
                                             <section className="sjp-field" key={title+index}>
                                                 <h4 key={title}>{title}</h4>
                                             {inputs.map(({label, placeholder, param, defaultValue}, index) => {
-                                                if (/^is/.test(placeholder) ) {
+                                                if (/^Is/i.test(label) ) {
                                                     return (
                                                         <div className='boolean-input' key={"radio"+index}>
                                                             <p key={label+index}>{label}</p>
-                                                            <label key={"true"}><input type='radio' name={placeholder} value='true' checked={args[param] == "true"} onChange={() => handleSelection(endpoint, param, "true")}/> Yes</label>
-                                                            <label key={"false"}><input type='radio' name={placeholder} value='false' checked={args[param] == "false"} onChange={() => handleSelection(endpoint, param, "false")}/> No</label>
+                                                            <label key={"true"}><input type='radio' onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} name={placeholder} value='true' checked={args[param] == "true"} onChange={() => handleSelection(endpoint, param, "true")}/> Yes</label>
+                                                            <label key={"false"}><input type='radio' onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} name={placeholder} value='false' checked={args[param] == "false"} onChange={() => handleSelection(endpoint, param, "false")}/> No</label>
                                                         </div>
                                                     )
                                                 } else { 
-                                                    return <label>{label}<input key={placeholder+index} value={args[param] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, param, e)}/></label>
+                                                    return <label>{label}<input onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} key={placeholder+index} value={args[param] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, param, e)}/></label>
                                                 }
                                             })}
                                             <button type='submit' disabled={isDisabled} className="sjp-submit" onClick={() => sendGetRequest(endpoint)}>
@@ -46,7 +48,18 @@ function SimpleJavaPrograms() {
                                                 /\?$/.test(title) ? 'Check' : 'Calculate'
                                                 }
                                                 </button>
-                                                { (answer[0] == endpoint && answer[2]) ? <><pre className='answer'>{answer[1]} </pre></> : "" }
+                                                { 
+                                                    (answer[0] == endpoint && answer[2]) ? 
+                                                        <>
+                                                        <pre className='answer'>
+                                                            {
+                                                                answer[1] == "false" || answer[1] == "true" ? 
+                                                                    <p className={answer[1] + " boolean"}>{answer[1]}</p> 
+                                                                        : <p className='string'>{answer[1].split("").filter(char => char != '"').join("")}</p>
+                                                            } 
+                                                        </pre></> 
+                                                        : "" 
+                                                }
                                             </section>
                                     )
                                 })
@@ -120,6 +133,9 @@ function SimpleJavaPrograms() {
     return (
         <>
             <Menu clicked='Simple Java Programs'/>
+            <section className='information yellow'>
+                <p>The first request, after a period of inactivity, will be resolved within 60 seconds, every other after instantly.</p>
+            </section>
             {generateProgramFields()}
         </>
     )
