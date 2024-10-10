@@ -212,7 +212,20 @@ const udemyJava = [
     {
         section: "OOP Part 1 - Inheritance",
         methods: [
-
+            {
+                "title": "A Simple Calculator",
+                "endpoint": "simple-calculator",
+                "inputs": [
+                    {label:"", placeholder: "number1", param: "number1"},
+                    {label:"", placeholder: "number2", param: "number2"},
+                    {label:"", placeholder: "choose1", param: "method", defaultValue: "", options: [
+                        {option: "addition", value: "add"},
+                        {option: "subtraction", value: "sub"},
+                        {option: "division", value: "div"},
+                        {option: "multiplication", value: "multi"},
+                    ]},
+                ]
+            },
         ],
     },
     {

@@ -30,7 +30,7 @@ function SimpleJavaPrograms() {
                                         
                                             <section className="sjp-field" key={title+index}>
                                                 <h4 key={title}>{title}</h4>
-                                            {inputs.map(({label, placeholder, param, defaultValue}, index) => {
+                                            {inputs.map(({label, placeholder, param, defaultValue, options}, index) => {
                                                 if (/^Is/i.test(label) ) {
                                                     return (
                                                         <div className='boolean-input' key={"radio"+index}>
@@ -39,15 +39,46 @@ function SimpleJavaPrograms() {
                                                             <label key={"false"}><input type='radio' onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} name={placeholder} value='false' checked={args[param] == "false"} onChange={() => handleSelection(endpoint, param, "false")}/> No</label>
                                                         </div>
                                                     )
+                                                } else if (placeholder == "choose1") {
+                                                    return (
+                                                        <div className='options1'>
+                                                        {
+                                                            options.map(({option, value}) => {
+                                                                return (
+                                                                    <button 
+                                                                        className='option1' 
+                                                                        onClick={() => handleSelection(endpoint, param, value)}
+                                                                        onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''}
+                                                                        >
+                                                                            {option}
+                                                                        </button>
+                                                                )
+                                                            })
+                                                        }
+                                                        </div>
+                                                    )
                                                 } else { 
-                                                    return <label>{label}<input onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} key={placeholder+index} value={args[param] && answer[0] == endpoint ? args[placeholder] : ""} className="sjp-input" placeholder={placeholder} onChange={(e) => handleInput(endpoint, param, e)}/></label>
+                                                    return (
+                                                        <label>
+                                                            {label}
+                                                            <input 
+                                                                onKeyDown={(e) => e.key === 'Enter' ? sendGetRequest(endpoint) : ''} 
+                                                                key={placeholder+index} value={args[param] && answer[0] == endpoint ? args[placeholder] : ""} 
+                                                                className="sjp-input" placeholder={placeholder} 
+                                                                onChange={(e) => handleInput(endpoint, param, e)}
+                                                            />
+                                                        </label>
+                                                    )
                                                 }
                                             })}
+                                            <div className='submit-div'>
                                             <button type='submit' disabled={isDisabled} className="sjp-submit" onClick={() => sendGetRequest(endpoint)}>
                                                 {
                                                 /\?$/.test(title) ? 'Check' : 'Calculate'
                                                 }
                                                 </button>
+                                                <p>Enter ↵</p>
+                                                </div>
                                                 { 
                                                     (answer[0] == endpoint && answer[2]) ? 
                                                         <>

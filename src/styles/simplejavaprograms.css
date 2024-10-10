@@ -58,6 +58,15 @@
     width:auto;
     margin:10px;
 }
+.submit-div {
+    display: flex;
+    align-items: center;
+}
+.submit-div > p {
+    font-size: smaller;
+    margin: 0;
+    color:gray;
+}
 .answer {
     margin: 0;
     width: 100%;
@@ -96,4 +105,16 @@
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
+}
+.option1 {
+    appearance: none;
+    border:0px;
+    margin:4px;
+    background-color: rgb(64, 88, 88);
+    color:white;
+    padding: 6px;
+}
+.option1:focus {
+    background-color: rgb(99, 191, 161);
+    color: black;
 }
