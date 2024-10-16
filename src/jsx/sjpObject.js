@@ -226,10 +226,69 @@ const udemyJava = [
                     ]},
                 ]
             },
+            {
+                "title": "Calculator for complex numbers",
+                "endpoint": "complex-numbers",
+                "inputs": [
+                    {label:"", placeholder: "real1", param: "real1"},
+                    {label:"", placeholder: "imaginary1", param: "imaginary1"},
+                    {label:"", placeholder: "real2", param: "real2"},
+                    {label:"", placeholder: "imaginary2", param: "imaginary2"},
+                    {label:"", placeholder: "choose1", param: "method", defaultValue: "", options: [
+                        {option: "addition", value: "add"},
+                        {option: "subtraction", value: "sub"},
+                    ]},
+                ]
+            },
+            {
+                "title": "Are they a teenager?",
+                "endpoint": "person",
+                "inputs": [
+                    {label:"First name", placeholder: "name", param: "first"},
+                    {label:"Last Name", placeholder: "surname", param: "last"},
+                    {label:"Age", placeholder: "age", param: "age"},
+                ]
+            },
+            {
+                "title": "Distance on a Cartesian plane",
+                "endpoint": "point",
+                "inputs": [
+                    {label:"X1", placeholder: "x1", param: "x1"},
+                    {label:"Y1", placeholder: "y1", param: "y1"},
+                    {label:"X2", placeholder: "x2", param: "x2"},
+                    {label:"Y2", placeholder: "y2", param: "y2"},
+                ]
+            },
+            {
+                "title": "What's the wall area?",
+                "endpoint": "wall",
+                "inputs": [
+                    {label:"width", placeholder: "width", param: "width"},
+                    {label:"height", placeholder: "height", param: "height"},
+                ]
+            },
+            {
+                "title": "Cuboid volume",
+                "endpoint": "cuboid",
+                "inputs": [
+                    {label:"width", placeholder: "width", param: "width"},
+                    {label:"length", placeholder: "length", param: "length"},
+                    {label:"height", placeholder: "height", param: "height"},
+                ]
+            },
+            {
+                "title": "Carpet cost",
+                "endpoint": "carpet",
+                "inputs": [
+                    {label:"width", placeholder: "width", param: "width"},
+                    {label:"length", placeholder: "length", param: "length"},
+                    {label:"cost", placeholder: "cost", param: "cost"},
+                ]
+            },
         ],
     },
     {
-        section: "OOP Part 2 - Polymorphism",
+        section: "OOP Part 2 - Composition, Encapsulation, Polymorphism",
         methods: [
 
         ]
