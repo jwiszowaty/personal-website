@@ -2,11 +2,23 @@
     width: 100vw;
     column-gap: 10vw;
     height: max-content;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
     color:#23424D;
     background-color: #f0f8ff;
+}
+.menu-top {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10vw;
+    justify-content: center;
+}
+.menu-bottom {
+    background-color: white;
+    box-shadow: 0px 2px 10px #679dcd;
+    border-radius: 15px;
+    height: 30px;
+    margin: 10px;
 }
 .name {
     display: flex;
@@ -32,6 +44,7 @@
 .nav > a {
     color:#23424D;
     text-decoration: none;
+    margin: 5px;
 }
 .nav > a:hover {
     font-weight: bolder;
