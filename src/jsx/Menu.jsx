@@ -13,8 +13,8 @@ function Menu({ clicked }) {
       method: "GET",
   })
   .then((response) => {
-      console.log(response);
-      return response
+      console.log(response.data);
+      setReason(response.data)
   })
   .catch((error) => {
       console.log(error)
@@ -47,7 +47,7 @@ function Menu({ clicked }) {
         </nav>
       </div>
       <div className='menu-bottom'>
-        {reason}
+        <pre>{reason}</pre>
       </div>
     </section>
   )
