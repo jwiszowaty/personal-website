@@ -24,6 +24,8 @@
     justify-content: center;
     text-align: center;
     padding: 5px;
+    width: min(90%, 1200px);
+    justify-self: center;
 }
 .name {
     display: flex;
@@ -72,3 +74,31 @@
 .nav > .blender-nav {
     width: 90px;
 }
+.loader-text {
+    margin-right: 5px;
+    letter-spacing: 5px;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 10px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,rgb(0, 255, 0) 90%,#0000);
+    background: 
+      var(--_g) 0%   63%,
+      var(--_g) 50%  63%,
+      var(--_g) 100% 63%;
+    background-size: calc(30%/3) 50%;
+    padding: 0 20px;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  63%,100%  63%}
+      40%{background-position:0% 100%, 50%   0%,100%  63%}
+      60%{background-position:0%  63%, 50% 100%,100%   0%}
+      80%{background-position:0%  63%, 50%  63%,100% 100%}
+  }
+  .reason-cv {
+    margin: 0;
+    width:min(90%,1000px);
+    height: max-content;
+  }

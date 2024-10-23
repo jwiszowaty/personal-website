@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 function Menu({ clicked }) {
   
-  const [ reason, setReason ] = useState()
+  const [reason, setReason] = useState(null)
   
   const giveAMillionReasons = async () => {
-    const reason = await axios({
+    setReason(null)
+    await axios({
       url: "https://testrestapi-latest.onrender.com/generate/reason",
       method: "GET",
   })
-  .then((response) => {
-      console.log(response.data);
-      setReason(response.data)
+      .then((response) => {
+        setReason(response.data)
   })
   .catch((error) => {
       console.log(error)
@@ -47,7 +47,7 @@ function Menu({ clicked }) {
         </nav>
       </div>
       <div className='menu-bottom'>
-        <pre>{reason}</pre>
+        {reason ? <><p className='reason-cv'>{reason}</p></> : <><p className='loader-text'>ANALYZING JAKUB'S CV</p><div className='loader'></div></>}
       </div>
     </section>
   )
