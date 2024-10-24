@@ -1,0 +1,31 @@
+.booking p, div{
+    width: max-content;
+}
+.booking {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "timetable updates"
+    "schedule schedule";
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 80% 20%;
+}
+.schedule {
+    grid-area: schedule;
+    width:100%;
+    height: 100%;
+}
+.updates {
+    grid-area: updates;
+}
+.timetable {
+    grid-area: timetable;
+    display: flex;
+}
+.timeslot p {
+    margin-right:20px;
+}
+.timeslot {
+    display: flex;
+    background-color: bisque;
+}

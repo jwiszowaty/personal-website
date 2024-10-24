@@ -4,6 +4,7 @@ import Blender from './jsx/Blender.jsx'
 import Aoc from './jsx/Aoc.jsx'
 import SimpleJavaPrograms from './jsx/SimpleJavaPrograms.jsx'
 import Archive from './jsx/Archive.jsx'
+import Booking from './jsx/Booking.jsx'
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/blender" element={<Blender/>} />
       <Route path="/projects" element={<Projects/>} />
       <Route path="/archive" element={<Archive/>} />
+        <Route path="/booking" element={<Booking/>} />
     </Routes>
     </>
   )
