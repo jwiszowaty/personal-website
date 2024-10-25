@@ -11,38 +11,46 @@ function Booking() {
                 // frameBorder="0"
             >    
                 </iframe>
-            <section className='updates'>
-                <p>Updates:</p>
-                <p>monday</p>
-                <section className='updates-monday'></section>
-                <p>tuesday</p>
-                <section className='updates-tuesday'></section>
-                <p>thursday</p>
-                <section className='updates-thursday'></section>
-                <p>saturday</p>
-                <section className='updates-saturday'></section>
-            </section>
-            <section className='timetable'>
-                <p>Timetable:</p>
-                <section className='updates-monday'>
-                    <p>monday</p>
-                    <div className='timeslot'><p>18:00</p><p>Alicja</p></div>
-                </section>
-                <section className='updates-tuesday'>
-                    <p>tuesday</p>
-                    <div className='timeslot'><p>18:30</p><p>Alicja</p></div>
-                    <div className='timeslot'><p>19:30</p><p>Alicja</p></div>
-                </section>
-                <section className='updates-thursday'>
-                    <p>thursday</p>0
-                    <div className='timeslot'><p>18:30</p><p>Alicja</p></div>
-                    <div className='timeslot'><p>19:30</p><p>Alicja</p></div>
-                </section>
-                <section className='updates-saturday'>
-                    <p>saturday</p>
-                    <div className='timeslot'><p>11:00</p><p>Alicja</p></div>
-                </section>
-            </section>
+            <table className='updates'>
+                <caption>Updates</caption>
+                <tr>
+                    <th>mondays</th>
+                    <td>no updates</td>
+                </tr>
+                <tr>
+                    <th>tuesdays</th>
+                    <td>no updates</td>
+                </tr>
+                <tr>
+                    <th>thursday</th>
+                    <td>no updates</td>
+                </tr>
+                <tr>
+                    <th>saturdays</th>
+                    <td>no updates</td>
+                </tr>
+            </table>
+            <table className='timetable'>
+                <caption>Timetable</caption>
+                <tr>
+                    <th>monday</th>
+                    <th>tuesday</th>
+                    <th>thursday</th>
+                    <th>saturday</th>
+                </tr>
+                <tr>
+                    <td>18:00 Alicja</td>
+                    <td>18:30 Martyna</td>
+                    <td>18:30 Gleb</td>
+                    <td>11:00 Rafał</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>19:30 Rafał</td>
+                    <td>19:30 Grzegorz</td>
+                </tr>
+                
+            </table>
         </div>
   )
 }
