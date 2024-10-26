@@ -39,15 +39,16 @@ function Booking() {
                     <th>saturday</th>
                 </tr>
                 <tr>
-                    <td>18:00 Alicja</td>
-                    <td>18:30 Martyna</td>
-                    <td>18:30 Gleb</td>
-                    <td>11:00 Rafał</td>
+                    <td className='reserved'>18:00 Reserved</td>
+                    <td className='reserved'>18:30 Reserved</td>
+                    <td className='reserved'>18:30 Reserved</td>
+                    <td className='reserved'>11:00 Reserved</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>19:30 Rafał</td>
-                    <td>19:30 Grzegorz</td>
+                    <td className='reserved'>19:30 Reserved</td>
+                    <td className='reserved'>19:30 Reserved</td>
+                    <td>12:00 Available</td>
                 </tr>
                 
             </table>
