@@ -5,27 +5,8 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 function Menu({ clicked }) {
   
-  const [reason, setReason] = useState(null)
-  
-  const giveAMillionReasons = async () => {
-    setReason(null)
-    await axios({
-      url: "https://testrestapi-latest.onrender.com/generate/reason",
-      method: "GET",
-  })
-      .then((response) => {
-        setReason(response.data)
-  })
-  .catch((error) => {
-      console.log(error)
-  })
-  }
-
   const tabs = [{tab: 'Simple Java Programs', endpoint: '/', label: 'sjp-nav'}, {tab: 'Coding projects', endpoint: '/projects', label: "projects-nav"}, {tab: '❄️ Advent of Code ❄️', endpoint: '/aoc', label: "aoc-nav"}, {tab: 'Blender', endpoint: '/blender', label: "blender-nav"}]
-  useEffect(() => {
-    
-    giveAMillionReasons()
-  },[])
+ 
   return (
     <section className='menu'>
       <div className='menu-top'>
@@ -45,9 +26,6 @@ function Menu({ clicked }) {
               })
             }
         </nav>
-      </div>
-      <div className='menu-bottom'>
-        {reason ? <><p className='reason-cv'>{reason}</p></> : <><p className='loader-text'>ANALYZING JAKUB'S CV</p><div className='loader'></div></>}
       </div>
     </section>
   )

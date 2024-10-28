@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import '../styles/simplejavaprograms.css'
-
 import "../styles/projects.css" // css for .information
 import udemyJava from './sjpObject'
 import Menu from './Menu'
+import CvAnalysis from './CvAnalysis'
 
 function SimpleJavaPrograms() {
     const [isDisabled, setIsDisabled] = useState(false)
@@ -163,7 +163,8 @@ function SimpleJavaPrograms() {
     }
     return (
         <>
-            <Menu clicked='Simple Java Programs'/>
+            <Menu clicked='Simple Java Programs' />
+            <CvAnalysis/>
             <section className='information yellow'>
                 <p>The first request, after a period of inactivity, will be resolved within 60 seconds, every other after instantly.</p>
             </section>

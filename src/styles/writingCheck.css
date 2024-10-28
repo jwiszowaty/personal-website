@@ -5,22 +5,34 @@ span {
 .grammar {
     font-weight: bolder;
     color: rgb(255, 0, 0);
-    background-color: rgb(255, 221, 162);
-    border: 1px solid black;
-    padding: 2px;
-    margin: 5px;
 }
 .vocab {
     font-weight: bolder;
-    color:azure;
-    border-radius: 5px;
-    background-color: blue;
-    padding: 5px;
-    margin: 5px;
+    color:rgb(35, 17, 151);
 }
-.feedback {
-    height:70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dashboard {
+    display: grid;
+    grid-template-areas: ". buttons"
+    "writing feedback";
+    grid-template-columns: auto auto;
+    grid-template-rows: 10% 90%;
+    overflow-y: scroll;
+    margin:10px;
+}
+.writing {
+    align-self: center;
+    grid-area: writing;
+}
+.grammar-feedback {
+    grid-area: feedback;
+    height:max-content
+}
+.vocab-feedback {
+    grid-area: feedback;
+    height: fit-content;
+    height: 100%;
+    
+}
+.feedback-buttons {
+    grid-area: buttons;
 }

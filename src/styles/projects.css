@@ -1,27 +1,81 @@
+.project p, a {
+    margin: 0;
+}
 .projects {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: max(60vw, 600px);
     overflow-y: scroll;
-    background-color: white
+    row-gap: 10px;
+    align-self: center;
 }
-.projects > .back-button {
-    width: 80px;
-    font-size: 20px;
-    border: 2px solid white;
-    background-color: white;
-    color: #23424D;
-    border-radius: 50px;
-    margin: 20px 0 20px 0;
+.project {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    width:100%;
+    background-color: hwb(34 90% 0%);
 }
-.projects > .back-button:hover {
-    background-color: rgb(123, 123, 123);
-    color: white;
+.info {
+    display: grid;
+    grid-template-areas: "about tools"
+    "links tools";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
 }
-.information {
-    border-top: 10px double aliceblue;
-    border-bottom: 10px double white;
+.title {
+    grid-area: title;
+    border: 2px solid black;
+    width: max(110px, 25%);
+    height: 100%;
+    padding: 0 10px 0 10px;
+    background-color: hwb(34 60% 0%);
+    justify-content: center;
+    align-content: center;
+}
+.about {
+    grid-area: about;
+    align-content: center;
+}
+.links {
+    grid-area: links;
+    display: flex;
+    gap: 15px;
+    background-color: hwb(34 90% 0%);
+    justify-items: center;
+    height: 100%;
+}
+.links a {
+    height: max-content;
+    margin: 10px 10px 10px 20px;
+    padding: 5px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+    min-width: 80px;
+}
+.links a:hover {
+    background-color: #7fffd4;
+}
+.links a:focus {
+    background-color: #fff47f;
+}
+.tools {
+    grid-area: tools;
+    display: flex;
+    column-gap: 10px;
+    width:100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: hwb(34 90% 0%);
+    align-content: center;
+}
+.tools p {
+    color:rgb(116, 116, 116);
+    margin: 2px;
 }
 .turquoise {
     background-color: #7fffd4;
@@ -29,7 +83,26 @@
 .yellow {
     background-color: yellow;
 }
+.information {
+    width: 100%;
+}
 .information > p > a {
     color: #504646;
     font-weight: bolder;
 }
+@media (max-width: 800px) {
+    .projects {
+        width: 90%;
+    }
+    .project {
+        flex-direction: column;
+    }
+    .title {
+        width:100%;
+    }
+    .info {
+        grid-template-areas: "about" 
+        "links"
+        "tools";
+    }
+  }
