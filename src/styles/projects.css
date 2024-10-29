@@ -5,10 +5,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: max(60vw, 600px);
+    width: max(70vw, 600px);
     overflow-y: scroll;
     row-gap: 10px;
     align-self: center;
+    margin-top: 15px;
 }
 .project {
     display: flex;
@@ -19,15 +20,16 @@
 }
 .info {
     display: grid;
-    grid-template-areas: "about tools"
+    grid-template-areas: 
+    "about tools"
     "links tools";
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: auto 50%;
     width: 100%;
+    border: 1px hwb(34 50% 50%) solid;
 }
 .title {
     grid-area: title;
-    border: 2px solid black;
+    border: 1px solid black;
     width: max(110px, 25%);
     height: 100%;
     padding: 0 10px 0 10px;
@@ -42,20 +44,22 @@
 .links {
     grid-area: links;
     display: flex;
-    gap: 15px;
-    background-color: hwb(34 90% 0%);
-    justify-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff4e6;
     height: 100%;
 }
 .links a {
     height: max-content;
-    margin: 10px 10px 10px 20px;
+    margin: 5px;
     padding: 5px;
-    border: 2px solid black;
+    border: 1.5px solid rgba(0, 0, 0, 0.57);
     text-decoration: none;
     color: black;
     border-radius: 15px;
     min-width: 80px;
+    text-wrap: nowrap;
 }
 .links a:hover {
     background-color: #7fffd4;
@@ -66,16 +70,14 @@
 .tools {
     grid-area: tools;
     display: flex;
-    column-gap: 10px;
     width:100%;
-    justify-content: space-around;
     flex-wrap: wrap;
     background-color: hwb(34 90% 0%);
-    align-content: center;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 .tools p {
     color:rgb(116, 116, 116);
-    margin: 2px;
 }
 .turquoise {
     background-color: #7fffd4;
@@ -104,5 +106,13 @@
         grid-template-areas: "about" 
         "links"
         "tools";
+        grid-template-columns: 100%;
+    }
+    .links {
+        margin: 5px 0 5px 0;
+    }
+    .links a {
+        padding: 5px;
+        margin:2px;
     }
   }

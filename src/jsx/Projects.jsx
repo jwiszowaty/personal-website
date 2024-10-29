@@ -7,9 +7,6 @@ function Projects() {
     <>
       <Menu clicked='Coding projects' />
       <div className='projects'>
-      <div className="information turquoise">
-        <p>It's a true joy seeing how the <Link to="/archive" className="link">designs of my website</Link> evolve. There are design updates planned for this section too.</p>
-        </div>
         {
           projects.map(({ title, id, about, links, tools }) => {
             return (

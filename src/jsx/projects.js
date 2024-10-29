@@ -38,17 +38,6 @@ const projects = [
         ],
         "tools" : ["JavaScript", "Node.js", "Express.js", "postgreSQL", "elephantSQL.com", "render.com", "netlify.com"],
     },
-    {
-        "title": "",
-        "id": "",
-        "about": "",
-        "links": [
-            { "linkName": "", "url": "" },
-            { "linkName": "", "url": "" },
-            { "linkName": "", "url": "" },
-        ],
-        "tools" : [],
-    },
 ]
 
 export default projects
